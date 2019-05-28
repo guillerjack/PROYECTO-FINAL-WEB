@@ -1,0 +1,188 @@
+:root {
+  --color-orange-light: #ff961f;
+  --color-orange-dark: #fe715f;
+}
+
+body{
+  font-family: serif;
+  font-size: 14px;
+  color:
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+a{
+ text-decoration: none;
+}
+/* Salida */
+
+#transition{
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  z-index: 9999;
+  background:transparent;
+  transition: all 1500ms ease-in-out;
+}
+
+#transition.in{
+  background:red;
+  transform: scale(10000)
+}
+
+
+/* Entrada */
+#intransition{
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  z-index: 9999;
+  background:red;
+  transition: all 1500ms ease-in-out;
+  transform: scale(10000)
+}
+
+#intransition.out{
+  background:transparent;
+  transform: scale(0)
+}
+
+.menu_bar {
+  display: none;
+}
+
+
+
+#header{
+  position: absolute;
+  width: 100%;
+  transition: all 2000ms ease-in-out;
+}
+
+#header.leave{
+  transform: translateY(-100px);
+}
+
+#header .container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ ul{
+  margin: auto;
+  display: flex;
+  perspective: 200px;
+  list-style: none;
+  padding: 0px;
+}
+
+li{
+  list-style: none;
+  padding: 15px 20px;
+}
+
+li:hover {
+  background: rgba(0, 0, 0, 3);
+  color:red;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+#header ul li ul{
+  *display: none;
+  flex-direction: column;
+  position: absolute;
+  background: red;
+  margin-top: 15px;
+  transform: rotateY(240deg) scale(0);
+  transition: all 1s;
+  box-shadow: 1px 1px 10px 0px red;
+}
+
+#header ul li:hover > ul{
+  display: block;
+  transform: rotateY(0deg) scale(1);
+  transition: all 1s;
+}
+
+#header ul li ul:before{
+  content:"";
+  width:0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 8px solid red;
+  position: absolute;
+  margin-top: -8px;
+  margin-left: 20px;
+  left:20px;
+}
+
+
+ ul li{
+  width: 150px;
+  opacity: .8;
+  line-height: 20px;
+  text-align: center;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+ ul li a{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+
+#header ul li a:hover{
+  background-color: red;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+
+.hero{
+  background: url("../IMG/IMG3.jpg")no-repeat;
+  background-position: top center;
+  background-size:cover;
+  color:#fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1{
+  font-weight:normal;
+  font-size: 50px;
+  max-width: 615px;
+  margin: 0 auto 80px;
+  text-align: left;
+}
+
+.hero h1 span{
+  display: block;
+}
+
+.hero h1 .top,
+.hero h1 .bottom {
+  font-size: 30px;
+  font-weight:normal;
+  color: #f06023;
+
+
+
+@media screen and(max-width: 800px){
+  header nav{
+
+  }
+}

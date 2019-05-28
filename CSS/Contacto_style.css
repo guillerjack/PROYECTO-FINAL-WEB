@@ -1,0 +1,185 @@
+body {
+  background-image: url("../IMG/IMG3.jpg");
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+form {
+  width: 450px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top:30px;
+  border-radius: 7px;
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: 17px;
+  border: none;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+#boton {
+  background:#31384A;
+  color: #fff;
+  padding: 20px;
+}
+
+#boton:hover {
+  cursor: pointer;
+}
+
+@media (max-width:480px) {
+  form{
+    width:100%;
+  }
+}
+
+h2 {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+  background: rgba(255, 0, 0, 0.4);
+  margin-top: 20px;
+}
+
+
+#header{
+  position: absolute;
+  width: 100%;
+  transition: all 2000ms ease-in-out;
+}
+
+#header.leave{
+  transform: translateY(-100px);
+}
+
+#header .container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ ul{
+  margin: auto;
+  display: flex;
+  perspective: 200px;
+  list-style: none;
+  padding: 0px;
+}
+
+li{
+  list-style: none;
+  padding: 15px 20px;
+}
+
+li:hover {
+  background: rgba(0, 0, 0, 3);
+  color:red;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+#header ul li ul{
+  *display: none;
+  flex-direction: column;
+  position: absolute;
+  background: red;
+  margin-top: 15px;
+  transform: rotateY(240deg) scale(0);
+  transition: all 1s;
+  box-shadow: 1px 1px 10px 0px red;
+}
+
+#header ul li:hover > ul{
+  display: block;
+  transform: rotateY(0deg) scale(1);
+  transition: all 1s;
+}
+
+#header ul li ul:before{
+  content:"";
+  width:0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 8px solid red;
+  position: absolute;
+  margin-top: -8px;
+  margin-left: 20px;
+  left:20px;
+}
+
+
+ ul li{
+  width: 150px;
+  opacity: .8;
+  line-height: 20px;
+  text-align: center;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+ ul li a{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+
+#header ul li a:hover{
+  background-color: red;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+
+.hero{
+  background: url("../IMG/IMG3.jpg")no-repeat;
+  background-position: top center;
+  background-size:cover;
+  color:#fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1{
+  font-weight:normal;
+  font-size: 50px;
+  max-width: 615px;
+  margin: 0 auto 80px;
+  text-align: left;
+}
+
+.hero h1 span{
+  display: block;
+}
+
+.hero h1 .top,
+.hero h1 .bottom {
+  font-size: 30px;
+  font-weight:normal;
+  color: #f06023;

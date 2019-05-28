@@ -1,0 +1,161 @@
+:root {
+  --color-orange-light: #ff961f;
+  --color-orange-dark: #fe715f;
+}
+
+body{
+  font-family: "Times New Roman", sans-serif;
+  font-size: 14px;
+  color:
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+a{
+ text-decoration: none;
+}
+
+#header{
+  position: absolute;
+  width: 100%;
+}
+
+#header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header ul{
+  display:flex;
+}
+
+#header ul a{
+  padding: 20px 15px;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+
+.hero h1{
+  font-weight:bold;
+  font-size: 48px;
+  max-width: 615px;
+  margin: 0 auto 80px;
+}
+
+.hero h1 span{
+  display: block;
+  color: white;
+}
+
+.hero h1 .top,
+.hero h1 .bottom {
+  font-size: 24px;
+  font-weight: normal;
+  color: red;
+}
+
+.hero h1 .top{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hero{
+  background-color: black;
+  background-size:cover;
+  text-align: center;
+  color:black;
+  padding: 240px 0;
+}
+
+
+.features{
+  background-color: #e9e9ea;
+  padding: 40px 0;
+}
+
+.features ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap:1.5rem;
+}
+
+.features ul li{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.features ul li figure{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: red;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.hero2 {
+  font-weight:normal;
+  font-size: 25px;
+  max-width: 615px;
+  color: white;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.hero2 .middle{
+  color: red;
+}
+
+.showcase {
+  padding: 40px 0;
+  background: linear-gradient(135deg, black 0%, red 100%);
+}
+
+
+.showcase ul figure{
+  position: relative;
+}
+.showcase ul figure img{
+  display: block;
+  width: 100%
+}
+
+.showcase ul figure:hover a{
+  opacity: 1;
+}
+
+.showcase ul figure a{
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 300ms ease-in-out;
+  background: linear-gradient(135deg, white 0%, black 100%);
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.showcase ul{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap:1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
